@@ -58,6 +58,11 @@ app.get('/bad', (req, res) => {
        errorMessage: 'Error processing request.'
     });
 });
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects Page'
+    });
+});
 
 // have to listen if we want to be able to respond to requets
 app.listen(port, () => { 
